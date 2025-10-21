@@ -1,0 +1,44 @@
+
+syntax = "proto3";
+
+package roomInventory;
+
+import "google/protobuf/struct.proto";
+import "google/protobuf/timestamp.proto";
+message room {
+    string id = 1;
+    string roomNumber = 2;
+    int32 floor = 3;
+    int32 type = 4;
+    int32 capacity = 5;
+    string bedType = 6;
+    repeated string amenities = 7;
+    int32 status = 8;
+    string description = 9;
+    repeated string images = 10;
+}
+
+
+
+
+message VoidRequest {}
+
+message CurrentUserReply {
+    string userId = 1;
+    string sessionId = 2;
+    string fullname = 3;
+    string email = 4;
+    string roleId = 5;
+    string avatar = 6;
+    bool emailVerified = 7;
+        string accessToken = 8;
+}
+
+message HelloMessageReply {
+    string hello = 1;
+}
+
+service roomInventoryService {
+    rpc currentUser(VoidRequest) returns (CurrentUserReply);
+    rpc helloMessage(VoidRequest) returns (HelloMessageReply);
+}
