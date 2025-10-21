@@ -1,0 +1,39 @@
+
+syntax = "proto3";
+
+package packageReservationMapping;
+
+import "google/protobuf/struct.proto";
+import "google/protobuf/timestamp.proto";
+message packageReservation {
+    string id = 1;
+    string reservationId = 2;
+    string packageId = 3;
+    double priceAtBooking = 4;
+    string notes = 5;
+}
+
+
+
+
+message VoidRequest {}
+
+message CurrentUserReply {
+    string userId = 1;
+    string sessionId = 2;
+    string fullname = 3;
+    string email = 4;
+    string roleId = 5;
+    string avatar = 6;
+    bool emailVerified = 7;
+        string accessToken = 8;
+}
+
+message HelloMessageReply {
+    string hello = 1;
+}
+
+service packageReservationMappingService {
+    rpc currentUser(VoidRequest) returns (CurrentUserReply);
+    rpc helloMessage(VoidRequest) returns (HelloMessageReply);
+}

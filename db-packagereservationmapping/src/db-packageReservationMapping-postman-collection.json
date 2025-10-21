@@ -1,0 +1,169 @@
+{
+  "info": {
+    "name": "db-packagereservationmapping-service API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "createPackageReservation",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"packageReservationId\": \"ID\",\n  \"reservationId\": \"ID\",\n  \"packageId\": \"ID\",\n  \"priceAtBooking\": \"Double\",\n  \"notes\": \"String\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serviceUrl}}//v1/packagereservations",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "v1",
+            "packagereservations"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "updatePackageReservation",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"reservationId\": \"ID\",\n  \"packageId\": \"ID\",\n  \"priceAtBooking\": \"Double\",\n  \"notes\": \"String\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serviceUrl}}//v1/packagereservations/:packageReservationId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "v1",
+            "packagereservations",
+            ":packageReservationId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "deletePackageReservation",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//v1/packagereservations/:packageReservationId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "v1",
+            "packagereservations",
+            ":packageReservationId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getPackageReservation",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//v1/packagereservations/:packageReservationId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "v1",
+            "packagereservations",
+            ":packageReservationId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "listPackageReservations",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//v1/packagereservations",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "v1",
+            "packagereservations"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
