@@ -1,0 +1,20 @@
+module.exports = {
+  SpecialrequestCreatedTopic:
+    "db-specialrequestmanagement-service-specialrequest-created",
+  SpecialrequestUpdatedTopic:
+    "db-specialrequestmanagement-service-specialrequest-updated",
+  SpecialrequestRetrivedTopic:
+    "db-specialrequestmanagement-service-specialrequest-retrived",
+  SpecialrequestDeletedTopic:
+    "db-specialrequestmanagement-service-specialrequest-deleted",
+  SpecialrequestsListedTopic:
+    "db-specialrequestmanagement-service-specialrequests-listed",
+  SpecialrequestpublicCreatedTopic:
+    "db-specialrequestmanagement-service-specialrequestpublic-created",
+  SpecialrequestsbycodeListedTopic:
+    "db-specialrequestmanagement-service-specialrequestsbycode-listed",
+  SpecialrequestbycodeRetrivedTopic:
+    "db-specialrequestmanagement-service-specialrequestbycode-retrived",
+  SpecialrequestbycodeCanceledTopic:
+    "db-specialrequestmanagement-service-specialrequestbycode-canceled",
+};
