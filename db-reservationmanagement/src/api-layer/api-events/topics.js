@@ -1,0 +1,22 @@
+module.exports = {
+  ReservationCreatedTopic:
+    "db-reservationmanagement-service-reservation-created",
+  ReservationUpdatedTopic:
+    "db-reservationmanagement-service-reservation-updated",
+  ReservationRetrivedTopic:
+    "db-reservationmanagement-service-reservation-retrived",
+  ReservationDeletedTopic:
+    "db-reservationmanagement-service-reservation-deleted",
+  ReservationsListedTopic:
+    "db-reservationmanagement-service-reservations-listed",
+  ReservationguestCreatedTopic:
+    "db-reservationmanagement-service-reservationguest-created",
+  ReservationpaymentConfirmedTopic:
+    "db-reservationmanagement-service-reservationpayment-confirmed",
+  ReservationbycodeRetrivedTopic:
+    "db-reservationmanagement-service-reservationbycode-retrived",
+  ReservationbycodeUpdatedTopic:
+    "db-reservationmanagement-service-reservationbycode-updated",
+  ReservationbycodeCanceledTopic:
+    "db-reservationmanagement-service-reservationbycode-canceled",
+};
