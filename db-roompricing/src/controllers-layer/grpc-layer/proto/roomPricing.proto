@@ -1,0 +1,41 @@
+
+syntax = "proto3";
+
+package roomPricing;
+
+import "google/protobuf/struct.proto";
+import "google/protobuf/timestamp.proto";
+message roomPrice {
+    string id = 1;
+    string roomId = 2;
+    google.protobuf.Timestamp startDate = 3;
+    google.protobuf.Timestamp endDate = 4;
+    double price = 5;
+    int32 priceType = 6;
+    string description = 7;
+}
+
+
+
+
+message VoidRequest {}
+
+message CurrentUserReply {
+    string userId = 1;
+    string sessionId = 2;
+    string fullname = 3;
+    string email = 4;
+    string roleId = 5;
+    string avatar = 6;
+    bool emailVerified = 7;
+        string accessToken = 8;
+}
+
+message HelloMessageReply {
+    string hello = 1;
+}
+
+service roomPricingService {
+    rpc currentUser(VoidRequest) returns (CurrentUserReply);
+    rpc helloMessage(VoidRequest) returns (HelloMessageReply);
+}
