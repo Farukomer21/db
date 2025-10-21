@@ -1,0 +1,15 @@
+
+  stages:
+    - deploy
+  
+  build-and-deploy-server:
+    stage: deploy
+    image: docker:stable
+    services:
+      - docker:dind
+    script:
+      - sudo bash -c "docker build -f Dockerfile -t db-document:latest ."
+      - sudo bash -c 'cd undefined/db/  && docker compose up -d db-documnet'
+    only:
+      - main
+  
